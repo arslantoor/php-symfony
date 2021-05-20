@@ -1,6 +1,4 @@
 composer.lock
-mysql/
 .idea/
 .idea/*
 /docker-compose.yml
-/.docker-compose-base.yaml
