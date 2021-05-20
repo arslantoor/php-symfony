@@ -1,8 +1,0 @@
-version: '3.7'
-
-services:
-  custom-container:
-    build:
-      context: .
-      dockerfile: ./nginx/Dockerfile
-    container_name: custom-container
