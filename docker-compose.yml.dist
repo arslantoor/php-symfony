@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-  custom-container:
+  test-app:
     build:
       context: .
       dockerfile: ./nginx/Dockerfile
-    container_name: custom-container
+    container_name: test-app-container
