@@ -14,7 +14,8 @@ mysql/
 app/
 compose.lock
 /docker-compose.yml
-docker-compose.yml
+/.docker-compose-base.yaml
+/.docker-compose-full.yaml
 ###< symfony/framework-bundle ###
 # Cache and logs (Symfony2)
 /app/cache/*
