@@ -10,4 +10,8 @@
 .idea/
 composer.lock
 mysql/
+.idea/
+app/
+compose.lock
+docker-compose.yml
 ###< symfony/framework-bundle ###
