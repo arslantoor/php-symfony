@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  test-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: test-app-container
+    volumes:
+      - ./app/:/var/www/html/
+    ports:
+      - "8080:80"
