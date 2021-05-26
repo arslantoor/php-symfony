@@ -1,5 +1,4 @@
-
-###> symfony/framework-bundle ###
+### symfony/framework-bundle ###
 /.env.local
 /.env.local.php
 /.env.*.local
@@ -8,3 +7,7 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+.idea/
+.idea/*
+docker-compose.yml
+docker-compose.yml.local
