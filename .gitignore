@@ -6,6 +6,9 @@
 /public/bundles/
 /var/
 /vendor/
+./app/node_modules
+./app/node_modules/*
+./app/webpack.config.js
 ###< symfony/framework-bundle ###
 .idea/
 .idea/*

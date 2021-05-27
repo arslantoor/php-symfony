@@ -1,0 +1,15 @@
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <!-- Load global scripts-->
+    <script type="module" src="{{  asset('js/material.js') }}"></script>
+    <script src="{{  asset('js/scripts.js') }}"></script>
+
+    <!-- Load Simple DataTables Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="{{  asset('js/datatables/datatables-simple-demo.js') }}"></script>
+
+    <script src="https://assets.startbootstrap.com/js/sb-customizer.js"></script>
+    <sb-customizer project="material-admin-pro"></sb-customizer>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"6559ed50bae21456","token":"6e2c2575ac8f44ed824cef7899ba8463","version":"2021.5.1","si":10}'></script>
+
+{% endblock %}
