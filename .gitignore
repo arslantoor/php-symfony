@@ -1,19 +1,4 @@
 ### symfony/framework ###
-./app/bin/*
-./app/bin
-
-./app/var
-./app/var/*
-
-./app/vendor
-./app/vendor/*
-
-.idea/
-.idea/*
-
-./app/.git
-./app/.git/*
-
 ./docker-compose.yml
 docker-compose.yml
 docker-compose.yml.local

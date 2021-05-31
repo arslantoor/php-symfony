@@ -1,9 +1,4 @@
-./app/var
-./app/var/*
-./app/vendor
-./app/vendor/*
-./app/.git
-./app/.git/*
+
 .git
 *.md
 .env
