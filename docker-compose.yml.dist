@@ -7,6 +7,6 @@ services:
       dockerfile: Dockerfile
     container_name: test-app-container
     volumes:
-      - ./app/:/var/www/html/
+      - .:/var/www/html/
     ports:
       - "8080:80"
