@@ -12,8 +12,4 @@
 /phpunit.xml.dist
 /phpunit.xml
 phpunit.xml.dist
-###< symfony/phpunit-bridge ###
-###> lexik/jwt-authentication-bundle ###
-/config/jwt/*.pem
-
 docker-compose.yml.local
