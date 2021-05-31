@@ -1,14 +1,17 @@
-./app/var
-./app/var/*
-./app/vendor
-./app/vendor/*
-./app/.git
-./app/.git/*
 .git
-./app/node_modules
-./app/node_modules/*
 *.md
-.env
+
 .idea
 .idea/*
+
+/node_modules/
+
+/var/
+/vendor/
+
+###< symfony/framework-bundle ###
+###> symfony/phpunit-bridge ###
+/phpunit.xml.dist
+/phpunit.xml
+phpunit.xml.dist
 docker-compose.yml.local

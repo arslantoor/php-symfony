@@ -1,16 +1,20 @@
-### symfony/framework-bundle ###
-/.env.local
-/.env.local.php
-/.env.*.local
-/config/secrets/prod/prod.decrypt.private.php
-/public/bundles/
+### symfony/framework ###
+./var
+./vendor/
+.idea
+./.idea/
+
+/node_modules/
+
 /var/
 /vendor/
-./app/node_modules
-./app/node_modules/*
-./app/webpack.config.js
-###< symfony/framework-bundle ###
-.idea/
-.idea/*
+
+./docker-compose.yml
 docker-compose.yml
 docker-compose.yml.local
+
+###< symfony/framework-bundle ###
+###> symfony/phpunit-bridge ###
+/phpunit.xml.dist
+/phpunit.xml
+phpunit.xml.dist

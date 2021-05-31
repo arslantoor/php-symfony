@@ -4,6 +4,6 @@ ENV WEBROOT="/var/www/html/public/"
 
 ENV PHP_CATCHALL="1"
 
-COPY app/* /var/www/html/
+COPY . /var/www/html/
 
 WORKDIR /var/www/html/
