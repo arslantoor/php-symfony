@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 class HomeController extends AbstractController
 {
     /**
-     * @Route ("/", name="home")
+     * @Route ("/dashboard", name="home")
      */
     public function index()
     {

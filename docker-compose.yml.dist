@@ -10,3 +10,17 @@ services:
       - .:/var/www/html/
     ports:
       - "8080:80"
+    depends_on:
+      - db
+    links:
+      - db
+  db:
+      image: mysql/mysql-server:8.0.20
+      container_name: 'mysqldb-container'
+      environment:
+        MYSQL_ROOT_PASSWORD: ""
+        MYSQL_DATABASE: ""
+        MYSQL_USER: ""
+        MYSQL_PASSWORD: ""
+      ports:
+        - 8000:3306
