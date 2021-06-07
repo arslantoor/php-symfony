@@ -12,5 +12,5 @@ import './styles/app.css';
 import './bootstrap';
 
 $(document).ready(function(){
-
+console.log("works")
 })
