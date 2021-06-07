@@ -3,10 +3,14 @@
 namespace App\Form;
 
 use App\Entity\User;
+use Doctrine\DBAL\Types\StringType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\ChoiceList\ChoiceList;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
@@ -19,18 +23,42 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('email',EmailType::class,[
-                'attr' => ['autocomplete' => 'new-password','class'=>'form-control', 'placeholder'=>'Enter Email','type'=>'email'],
+                'attr' => ['autocomplete' => 'new-password','class'=>'form-control my-2', 'placeholder'=>'Type Email','type'=>'email'],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'Please Type a Email address',
                     ]),
                     ]
             ])
-            ->add('password', PasswordType::class,[
-                'attr' => ['autocomplete' => 'new-password','class'=>'form-control', 'placeholder'=>'Enter password'],
+            ->add('username',TextType::class,[
+                'attr' => ['autocomplete' => 'new-password','class'=>'form-control my-2', 'placeholder'=>'Type Username'],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'Please Type Your name',
+                    ]),
+                ]
+            ])
+//            ->add('isVerified',CheckboxType::class,[
+//                'attr' => ['class'=>'m-2 my-2','type'=>'checkbox'],
+//                'constraints' => [
+//                    new NotBlank([
+//                        'message' => 'Please Type Your name',
+//                    ]),
+//                ]
+//            ])
+//            ->add('roles',ChoiceType::class, [
+//                'attr' => ['class'=>'form-control my-2','value'=>"test"],
+//                'choices'  => [
+//                    'SELECT USER ROLE' => null,
+//                    'ROLE_USER' => 'ROLE_USER',
+//                    'ROLE_ADMIN' => 'ROLE_ADMIN',
+//                ],
+//            ])
+            ->add('password', PasswordType::class,[
+                'attr' => ['autocomplete' => 'new-password','class'=>'form-control my-2', 'placeholder'=>'Type password'],
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Please Type a password',
                     ]),
                     new Length([
                         'min' => 6,
@@ -40,14 +68,15 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password','class'=>'form-control', 'placeholder'=>'Enter plain password'],
+                'attr' => ['autocomplete' => 'new-password','class'=>'form-control my-2', 'placeholder'=>'Type plain password'],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'Please Type a password',
                     ]),
                     new Length([
                         'min' => 6,
@@ -57,7 +86,9 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+
             ->add('agreeTerms', CheckboxType::class, [
+                'attr' => ['class'=>'checkbox m-2 my-2'],
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([

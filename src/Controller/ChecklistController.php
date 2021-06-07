@@ -2,6 +2,7 @@
 
 
 namespace App\Controller;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,6 +13,7 @@ class ChecklistController extends AbstractController
 
     /**
      * @Route ("/checklist", name="checklist")
+     * @Security("is_granted('ROLE_ADMIN') or is_granted('ROLE_USER')")
      */
     public function checklist(UserInterface $user)
     {
