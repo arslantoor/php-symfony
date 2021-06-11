@@ -4,7 +4,7 @@ ENV WEBROOT="/var/www/html/public/"
 
 ENV PHP_CATCHALL="1"
 
-ENV mysqli="1"
+ENV RUN_SCRIPTS="1"
 
 COPY . /var/www/html/
 

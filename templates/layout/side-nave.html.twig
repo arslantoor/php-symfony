@@ -27,14 +27,23 @@
                 <div class="nav-link-icon">
                     <i class="material-icons-outlined">list</i>
                 </div>
-                symfony checklist
+                    symfony checklist
             </a>
         {% else %}
             <a class="nav-link active mdc-ripple-upgraded" href="/dashboard">
                 <div class="nav-link-icon"><i class="material-icons">language</i></div>
                 Overview
             </a>
-
+            <a class="nav-link active mdc-ripple-upgraded" href="/view/userchecklist">
+                <div class="nav-link-icon">
+                    <i class="material-icons-outlined">view_module</i>
+                </div>
+                view user checklist
+            </a>
+            <a class="nav-link active mdc-ripple-upgraded" href="/add/checklist">
+                <div class="nav-link-icon"><i class="material-icons">checklist</i></div>
+                Add Checklist
+            </a>
         {% endif %}
         <!-- Drawer link (Dashboards)-->
         <a class="nav-link collapsed mdc-ripple-upgraded" href="javascript:void(0);" data-bs-toggle="collapse"

@@ -30,7 +30,6 @@ class UserController extends AbstractController
         $updateFrom->getter();
 
 
-
         return $this->render('/user/update_user.html.twig',[
         'updateUserForm' => $form->createView(),
             'userEmail'=>$email
@@ -45,6 +44,7 @@ class UserController extends AbstractController
         $user_table = $entityManager->getRepository(User::class)->find($user_id);
         $user_table->setIsVerified(true);
         $entityManager->flush();
+        return $this->redirectToRoute('dashboard');
 
     }
 
