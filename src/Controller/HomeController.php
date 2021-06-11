@@ -22,10 +22,8 @@ class HomeController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $user_list = $entityManager->getRepository(User::class)->findAll();
         $total=count($user_list);
-//        dd($total);
         $email =$user->getEmail();
         $role = $user->getRoles();
-//        dd($role[0]);
         if ($role[0] === 'ROLE_USER')
         {
             return $this->render('index.html.twig',[

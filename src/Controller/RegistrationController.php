@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Entity\CheckListInfo;
+use App\Entity\Checklist;
 use App\Form\RegistrationFormType;
 use App\Security\EmailVerifier;
 use App\Repository\UserRepository;
@@ -29,8 +31,11 @@ class RegistrationController extends AbstractController
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
+
         $user = new User();
+        $checkList = new Checklist();
         $form = $this->createForm(RegistrationFormType::class, $user);
+        $entityManager = $this->getDoctrine()->getManager();
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -42,10 +47,20 @@ class RegistrationController extends AbstractController
                 )
             );
             $user->setRoles(array('ROLE_USER'));
-
-            $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
+
+            $checkListInfo = new CheckListInfo();
+            $checkListObject = $entityManager->getRepository(Checklist::class)->findAll();
+            $entityManager->persist($checkListInfo);
+            if($checkListObject){
+                foreach($checkListObject as $checklist)
+                {
+                    $checkListInfo->setUser($user);
+                    $checkListInfo->setChecklist($checklist);
+                    $entityManager->flush();
+                }
+            }
 
             // generate a signed url and email it to the user
             $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,

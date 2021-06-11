@@ -3,8 +3,11 @@
 
 namespace App\Form;
 use App\Entity\User;
+<<<<<<< HEAD
 use Doctrine\DBAL\Types\StringType;
 use phpDocumentor\Reflection\Type;
+=======
+>>>>>>> fec20a78... Updated feature checklist check/uncheck by admin & view by user
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\ChoiceList\ChoiceList;
 use Symfony\Component\Form\ChoiceList\Factory\Cache\ChoiceValue;
