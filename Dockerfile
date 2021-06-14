@@ -4,4 +4,4 @@ ENV WEBROOT="/var/www/html/public/"
 
 COPY --chown nginx:nginx . /var/www/html/
 
-WORKDIR /var/www/html/q
+WORKDIR /var/www/html/
