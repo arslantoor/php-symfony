@@ -47,5 +47,27 @@ class UserController extends AbstractController
         return $this->redirectToRoute('dashboard');
 
     }
+    /**
+     * @Route("/delete/user/{user_id}/")
+     */
+    function delete_user($user_id, Request $request): Response
+    {
+        $user = new User();
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $user_table = $entityManager->getRepository(User::class)->find($user_id);
+        if (!$user_table) {
+            throw $this->createNotFoundException(
+                'No user found for id '.$user_id
+            );
+        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($user_table);
+
+        $entityManager->flush();
+
+        return $this->redirectToRoute('dashboard');
+    }
+
 
 }
