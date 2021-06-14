@@ -1,9 +1,6 @@
 ### symfony/framework ###
 .idea
-<<<<<<< HEAD
 node_modules
-=======
->>>>>>> feature/symfony-app
 /var/
 /vendor/
 

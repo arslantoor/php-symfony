@@ -3,11 +3,7 @@
 .idea
 /var/
 /vendor/
-<<<<<<< HEAD
 node_modules
-=======
-
->>>>>>> feature/symfony-app
 ###> symfony/phpunit-bridge ###
 phpunit.xml.dist
 
