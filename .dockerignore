@@ -1,17 +1,13 @@
 .git
 *.md
-
 .idea
-.idea/*
-
-/node_modules/
-
 /var/
 /vendor/
-
-###< symfony/framework-bundle ###
+node_modules
 ###> symfony/phpunit-bridge ###
-/phpunit.xml.dist
-/phpunit.xml
 phpunit.xml.dist
-docker-compose.yml.local
+
+### docker ###
+docker-compose.yml
+docker-compose.yml.dist
+Dockerfile
