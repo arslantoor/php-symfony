@@ -23,9 +23,7 @@ class ChecklistController extends AbstractController
         $email =$user->getEmail();
         $entityManager = $this->getDoctrine()->getManager();
         $checkList = $entityManager->getRepository(CheckListInfo::class)->findOneBy(['user'=>$user->getId()]);
-        foreach ($checkList as $list){
-            dd($list);
-        }
+
         return $this->render('checklist.html.twig',['user_check_list'=>$checkList,'user_email'=>$email]);
     }
 

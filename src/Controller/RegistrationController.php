@@ -58,6 +58,7 @@ class RegistrationController extends AbstractController
                 {
                     $checkListInfo->setUser($user);
                     $checkListInfo->setChecklist($checklist);
+                    $checkListInfo->setStatus(0);
                     $entityManager->flush();
                 }
             }
