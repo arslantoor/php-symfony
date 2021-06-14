@@ -55,6 +55,7 @@
                             <div class="table-responsive">
                                 <table class="table align-middle">
                                     <tbody>
+                                    {% if user_check_list %}
                                         <tr>
                                             <td>{{  user_check_list.id  }}</td>
                                             <td>
@@ -67,6 +68,11 @@
                                             <td>{{ user_check_list.checklist.name }}</td>
 
                                         </tr>
+                                    {% else %}
+                                        <tr>
+                                            <td>No record Found</td>
+                                        </tr>
+                                    {% endif %}
 
                                     </tbody>
                                 </table>
