@@ -1973,6 +1973,12 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD:composer.lock
+=======
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.23.0"
+            },
+>>>>>>> 47281d880bcb21534a882daf44a91d16f68366bc:app/composer.lock
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2054,6 +2060,12 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD:composer.lock
+=======
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.23.0"
+            },
+>>>>>>> 47281d880bcb21534a882daf44a91d16f68366bc:app/composer.lock
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2131,6 +2143,12 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD:composer.lock
+=======
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.23.0"
+            },
+>>>>>>> 47281d880bcb21534a882daf44a91d16f68366bc:app/composer.lock
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2207,6 +2225,12 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD:composer.lock
+=======
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.23.0"
+            },
+>>>>>>> 47281d880bcb21534a882daf44a91d16f68366bc:app/composer.lock
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2287,6 +2311,12 @@
                 "portable",
                 "shim"
             ],
+<<<<<<< HEAD:composer.lock
+=======
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.23.0"
+            },
+>>>>>>> 47281d880bcb21534a882daf44a91d16f68366bc:app/composer.lock
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",

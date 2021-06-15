@@ -1,20 +1,12 @@
 ### symfony/framework ###
-./var
-./vendor/
 .idea
-./.idea/
-
-/node_modules/
-
+node_modules
+.env.local
 /var/
 /vendor/
-
-./docker-compose.yml
-docker-compose.yml
-docker-compose.yml.local
-
-###< symfony/framework-bundle ###
 ###> symfony/phpunit-bridge ###
-/phpunit.xml.dist
-/phpunit.xml
 phpunit.xml.dist
+
+### docker ###
+docker-compose.yml
+
