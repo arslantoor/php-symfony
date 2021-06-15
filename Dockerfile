@@ -8,4 +8,7 @@ ENV RUN_SCRIPTS="1"
 
 COPY . /var/www/html/
 
+COPY --chown nginx:nginx . /var/www/html/
+
+
 WORKDIR /var/www/html/
