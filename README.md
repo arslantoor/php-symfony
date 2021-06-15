@@ -1,6 +1,6 @@
 
 # Description
-Setup of basic symfony checklist app which assign checklist on user signup, user can be differentiate on the base of user Role such as ROLE_ADMIN and ROLE_USER.Admin can check uncheck checklist and user can view his/her checklist,there is an console command which will be use to change user role.
+Setup of basic symfony checklist app which assign checklist on user signup, user can be differentiate on the base of user Role such as ROLE_ADMIN and ROLE_USER.
 
 # Prerequisites
 * symfony 5.3
@@ -38,9 +38,6 @@ docker-compose build
 ```
 docker-compose up
 ```
-#Console Command
-```
-php bin/console update-user 1 ROLE_USER
-```
+
 
 Brows <a href="http://localhost:8080">localhost:8080<a>
