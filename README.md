@@ -38,7 +38,7 @@ docker-compose build
 ```
 docker-compose up
 ```
-#Console Command
+# Console Command
 ```
 php bin/console update-user 1 ROLE_USER
 ```
