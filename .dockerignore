@@ -1,18 +1,19 @@
+### symfony/framework ###
 .git
 *.md
-
 .idea
-.idea/*
-
-/node_modules/
-/migrations/
-/translations/
+.env.local
 /var/
 /vendor/
+/migrations/
+/translations/
+/node_modules/
 
-###< symfony/framework-bundle ###
 ###> symfony/phpunit-bridge ###
-/phpunit.xml.dist
-/phpunit.xml
 phpunit.xml.dist
-docker-compose.yml.local
+
+### docker ###
+docker-compose.yml
+docker-compose.yml.dist
+Dockerfile
+
