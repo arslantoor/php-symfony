@@ -103,6 +103,18 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
     },
+    "jms/metadata": {
+        "version": "2.5.0"
+    },
+    "jms/serializer": {
+        "version": "3.12.3"
+    },
+    "knplabs/knp-menu": {
+        "version": "v3.2.0"
+    },
+    "knplabs/knp-menu-bundle": {
+        "version": "v3.1.0"
+    },
     "laminas/laminas-code": {
         "version": "4.3.0"
     },
@@ -138,6 +150,9 @@
     },
     "phpspec/prophecy": {
         "version": "1.13.0"
+    },
+    "phpstan/phpdoc-parser": {
+        "version": "0.5.5"
     },
     "phpunit/php-code-coverage": {
         "version": "9.2.6"
@@ -242,6 +257,47 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "sonata-project/admin-bundle": {
+        "version": "4.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "4.0",
+            "ref": "bb3620402b7846fa89fa10248c470e6b458ad413"
+        },
+        "files": [
+            "config/packages/sonata_admin.yaml",
+            "config/routes/sonata_admin.yaml",
+            "src/Admin/.gitignore"
+        ]
+    },
+    "sonata-project/block-bundle": {
+        "version": "4.6.0"
+    },
+    "sonata-project/cache": {
+        "version": "2.1.1"
+    },
+    "sonata-project/doctrine-extensions": {
+        "version": "1.13.0"
+    },
+    "sonata-project/exporter": {
+        "version": "2.6.2"
+    },
+    "sonata-project/form-extensions": {
+        "version": "1.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.4",
+            "ref": "bfc222606aea5418345af70104d974a25dc7c441"
+        },
+        "files": [
+            "config/packages/sonata_form.yaml"
+        ]
+    },
+    "sonata-project/twig-extensions": {
+        "version": "1.6.0"
     },
     "symfony/asset": {
         "version": "v5.3.0"
@@ -504,6 +560,9 @@
     "symfony/runtime": {
         "version": "v5.3.0"
     },
+    "symfony/security-acl": {
+        "version": "v3.1.2"
+    },
     "symfony/security-bundle": {
         "version": "5.3",
         "recipe": {
@@ -662,6 +721,9 @@
         "version": "1.2.0"
     },
     "twig/extra-bundle": {
+        "version": "v3.3.1"
+    },
+    "twig/string-extra": {
         "version": "v3.3.1"
     },
     "twig/twig": {
