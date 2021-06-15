@@ -1,33 +1,21 @@
 ### symfony/framework ###
-./var
-./vendor/
 .idea
-./.idea/
-
-/node_modules/
-
+.env.local
 /var/
 /vendor/
-
 /migrations/
 /translations/
+
 # Backup entities generated with doctrine:generate:entities command
 /src/Entity/
 
-./docker-compose.yml
+### docker ###
 docker-compose.yml
-docker-compose.yml.local
 
-./.env
-
-###< symfony/framework-bundle ###
 ###> symfony/phpunit-bridge ###
-/phpunit.xml.dist
-/phpunit.xml
 phpunit.xml.dist
+
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
-npm-debug.log
-yarn-error.log
 ###< symfony/webpack-encore-bundle ###

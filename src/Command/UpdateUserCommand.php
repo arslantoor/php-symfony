@@ -69,12 +69,14 @@ class UpdateUserCommand extends Command
         else{
             $io->note('record now found');
         }
+ 
+
         //close
         $userId = $input->getArgument('user_id');
         $output->writeln('<info>   Write User role as like ROLE_ADMIN or ROLE_USER otherwise it will not acceptable</info>');
         $userRole = $input->getArgument('user_role');
 
-        if($userRole==='ROLE_ADMIN' or $userRole=== 'ROLE_USER'){
+        if($userRole ==='ROLE_ADMIN' or $userRole === 'ROLE_USER'){
             $user_table = $this->userRepository->findOneBy(["id"=>$userId]);
             $user_table->setRoles(array($userRole));
             $entityManager = $this->entityManagerInterface;
