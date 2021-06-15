@@ -1,6 +1,6 @@
-
 # Description
 Setup of basic symfony checklist app which assign checklist on user signup, user can be differentiate on the base of user Role such as ROLE_ADMIN and ROLE_USER.
+
 
 # Prerequisites
 * symfony 5.3
@@ -14,6 +14,7 @@ Setup of basic symfony checklist app which assign checklist on user signup, user
 * Install NPM and yarn any latest version to serve your assets/javascript/css files
 * Install docker <a href="https://docs.docker.com/engine/install/ubuntu/">install docker</a>
 * Install docker-compose <a href="https://docs.docker.com/compose/install/">install docker-compose</a>,</li>
+
 # Project Setup steps
 
 ```git clone
