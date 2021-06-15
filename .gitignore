@@ -1,9 +1,9 @@
 ### symfony/framework ###
 .idea
 node_modules
+.env.local
 /var/
 /vendor/
-
 ###> symfony/phpunit-bridge ###
 phpunit.xml.dist
 
