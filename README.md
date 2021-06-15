@@ -1,5 +1,6 @@
 # Description
 Setup of basic symfony checklist app with docker
+
 # Prerequisites
 * symfony 5.3
 * Symfony CLI version v4.23.5
@@ -38,4 +39,6 @@ docker-compose build
 docker-compose up
 ```
 
+
 Brows <a href="http://localhost:8080">localhost:8080<a>
+
