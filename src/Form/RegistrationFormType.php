@@ -35,22 +35,6 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ]
             ])
-//            ->add('isVerified',CheckboxType::class,[
-//                'attr' => ['class'=>'m-2 my-2','type'=>'checkbox'],
-//                'constraints' => [
-//                    new NotBlank([
-//                        'message' => 'Please Type Your name',
-//                    ]),
-//                ]
-//            ])
-//            ->add('roles',ChoiceType::class, [
-//                'attr' => ['class'=>'form-control my-2','value'=>"test"],
-//                'choices'  => [
-//                    'SELECT USER ROLE' => null,
-//                    'ROLE_USER' => 'ROLE_USER',
-//                    'ROLE_ADMIN' => 'ROLE_ADMIN',
-//                ],
-//            ])
             ->add('password', PasswordType::class,[
                 'attr' => ['autocomplete' => 'new-password','class'=>'form-control my-2', 'placeholder'=>'Type password'],
                 'constraints' => [
