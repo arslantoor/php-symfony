@@ -26,19 +26,31 @@
                                         {% endfor %}</div>
                                 </div>
                                 <!-- Register new account form-->
-                                {{ form_start(updateUserForm) }}
+                                <form action="/update/user_record/{{ userData.id }}/" method="post">
                                 <div class="mb-4">
-                                    {{ form_row(updateUserForm.email) }}
-                                    {{ form_row(updateUserForm.username) }}
-                                    {{ form_row(updateUserForm.isVerified) }}
-                                    {{ form_row(updateUserForm.roles) }}
-
+                                    <label for="userName">User Name:</label>
+                                    <input type="text" id="userName" name="username" value="{{ userData.username }}" class="form-control"  required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="userEmail">User Email:</label>
+                                    <input type="text" id="userEmail" name="email" value="{{ userData.email }}" class="form-control"  required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="userName">User Role:</label>
+                                   <select name="role" id="userRole" class="form-control" required>
+                                       <option value="{{ userData.roles[0] }}" selected>{{ userData.roles[0] }}</option>
+                                       {% if  userData.roles[0]  == "ROLE_ADMIN"  %}
+                                       <option value="ROLE_ADMIN">ROLE_USER</option>
+                                       {% else %}
+                                       <option value="ROLE_USER">ROLE_ADMIN</option>
+                                       {% endif %}
+                                   </select>
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                    <a class="small fw-500 text-decoration-none" href="/">Sign in instead</a>
+                                    <a class="small fw-500 text-decoration-none" href="/dashboard">/dashboard</a>
                                     <button type="submit" class="btn btn-primary">Update</button>
                                 </div>
-                                {{ form_end(updateUserForm) }}
+                                </form>
                             </div>
                         </div>
                     </div>

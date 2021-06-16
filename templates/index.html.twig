@@ -189,9 +189,11 @@
                                             </td>
                                             <td>
                                                 <div class="display flex">
-                                                    <a href="/update/roles/{{ user.id }}"><i class="material-icons-outlined bg-primary text-light p-1">edit</i></a>
-{#                                                    <span style="cursor: pointer" id="{{ index }}"><i class="material-icons-outlined bg-primary text-light p-1">edit</i></span>#}
+                                                    <a href="/edit/user/{{ user.id }}"><i class="material-icons-outlined bg-primary text-light p-1">edit</i></a>
                                                     <a href="/delete/user/{{ user.id }}" id="{{ index }}" onclick="return confirm('are u sure?')" ><i class="material-icons-outlined bg-danger text-light p-1">delete</i></a>
+                                                    {% if user.isVerified == false %}
+                                                        <a href="/update/status/{{ user.id }}" id="{{ index }}" ><i class="material-icons-outlined bg-success text-light p-1">done</i></a>
+                                                    {% endif %}
                                                 </div>
 
                                             </td>
