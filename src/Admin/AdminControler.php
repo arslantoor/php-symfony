@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class AdminControler extends AbstractAdmin
 {
+
     protected function configureFormFields(FormMapper $formMapper): void
     {
         $formMapper->add('username', TextType::class);
@@ -21,7 +22,7 @@ class AdminControler extends AbstractAdmin
         $formMapper->add('password', PasswordType::class);
         $formMapper->add('roles', ChoiceType::class, [
                 'multiple' => true,
-                'choices' => ['ROLE_USER' => 'ROLE_USER', 'ROLE_ADMIN' => 'ROLE_ADMIN']
+                'choices' => ['User' => 'ROLE_USER', 'Admin' => 'ROLE_ADMIN']
             ]);
         $formMapper->add('isVerified', CheckboxType::class);
     }

@@ -32,8 +32,6 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
     public function authenticate(Request $request): PassportInterface
     {
         $email = $request->request->get('email', '');
-//        $roles = $request->getRoles('roles', '')
-
         $request->getSession()->set(Security::LAST_USERNAME, $email);
         return new Passport(
             new UserBadge($email),
@@ -50,9 +48,6 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
 
             return new RedirectResponse($targetPath);
         }
-
-        // For example:
-        //return new RedirectResponse($this->urlGenerator->generate('some_route'));
         return new RedirectResponse($this->urlGenerator->generate('dashboard'));
     }
 
