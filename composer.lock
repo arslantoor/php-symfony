@@ -4,7 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+    "aliases": [],
     "content-hash": "d54c0006ba421e5c2b4e34d698b6da11",
+    "minimum-stability": "dev",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -3992,7 +3994,36 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "4.0-dev"
-                }
+                },
+                "composer/package-versions-deprecated": "^1.8",
+                "doctrine/annotations": "^1.10.4",
+                "doctrine/collections": "~1.0",
+                "doctrine/dbal": "^2.10|^3.0",
+                "doctrine/orm": "^2.7.3",
+                "symfony/cache": "^5.1",
+                "symfony/config": "^4.4|^5.0",
+                "symfony/dependency-injection": "^4.4|^5.0",
+                "symfony/doctrine-messenger": "^5.1",
+                "symfony/expression-language": "^4.4|^5.0",
+                "symfony/form": "^5.1.3",
+                "symfony/http-kernel": "^5.0",
+                "symfony/messenger": "^4.4|^5.0",
+                "symfony/property-access": "^4.4|^5.0",
+                "symfony/property-info": "^5.0",
+                "symfony/proxy-manager-bridge": "^4.4|^5.0",
+                "symfony/security-core": "^5.3",
+                "symfony/stopwatch": "^4.4|^5.0",
+                "symfony/translation": "^4.4|^5.0",
+                "symfony/uid": "^5.1",
+                "symfony/validator": "^5.2",
+                "symfony/var-dumper": "^4.4|^5.0"
+            },
+            "suggest": {
+                "doctrine/dbal": "",
+                "doctrine/orm": "",
+                "symfony/form": "",
+                "symfony/property-info": "",
+                "symfony/validator": ""
             },
             "autoload": {
                 "classmap": [
@@ -9219,6 +9250,8 @@
         {
             "name": "symfony/security-acl",
             "version": "v3.1.2",
+            "name": "myclabs/deep-copy",
+            "version": "1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-acl.git",
@@ -10673,7 +10706,8 @@
                 "serialize"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v5.3.0"
+                "source": "https://github.com/symfony/var-exporter/tree/v5.3.0",
+                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.23.0"
             },
             "funding": [
                 {
@@ -10759,7 +10793,8 @@
                 "push"
             ],
             "support": {
-                "source": "https://github.com/symfony/web-link/tree/v5.3.0"
+                "source": "https://github.com/symfony/web-link/tree/v5.3.0",
+                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.23.0"
             },
             "funding": [
                 {
@@ -10830,24 +10865,32 @@
             "description": "Integration with your Symfony app & Webpack Encore!",
             "support": {
                 "issues": "https://github.com/symfony/webpack-encore-bundle/issues",
-                "source": "https://github.com/symfony/webpack-encore-bundle/tree/v1.11.2"
+                "source": "https://github.com/symfony/webpack-encore-bundle/tree/v1.11.2",
+                "description": "Provides the functionality to export PHP variables for visualization",
+                "homepage": "http://www.github.com/sebastianbergmann/exporter",
+                "keywords": [
+                    "export",
+                    "exporter"
+                ],
+                "support": {
+                    "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.23.0"
+                },
+                "funding": [
+                    {
+                        "url": "https://symfony.com/sponsor",
+                        "type": "custom"
+                    },
+                    {
+                        "url": "https://github.com/fabpot",
+                        "type": "github"
+                    },
+                    {
+                        "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                        "type": "tidelift"
+                    }
+                ],
+                "time": "2021-04-26T12:48:17+00:00"
             },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-04-26T12:48:17+00:00"
-        },
         {
             "name": "symfony/yaml",
             "version": "v5.3.0",
@@ -10905,24 +10948,31 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.3.0"
+                "source": "https://github.com/symfony/yaml/tree/v5.3.0",
+                "description": "Snapshotting of global state",
+                "homepage": "http://www.github.com/sebastianbergmann/global-state",
+                "keywords": [
+                    "global state"
+                ],
+                "support": {
+                    "source": "https://github.com/symfony/polyfill-php73/tree/v1.23.0"
+                },
+                "funding": [
+                    {
+                        "url": "https://symfony.com/sponsor",
+                        "type": "custom"
+                    },
+                    {
+                        "url": "https://github.com/fabpot",
+                        "type": "github"
+                    },
+                    {
+                        "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                        "type": "tidelift"
+                    }
+                ],
+                "time": "2021-05-26T17:43:10+00:00"
             },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-05-26T17:43:10+00:00"
-        },
         {
             "name": "symfonycasts/reset-password-bundle",
             "version": "v1.8.0",
@@ -10965,7 +11015,22 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
             ],
             "description": "Symfony bundle that adds password reset functionality.",
             "support": {
@@ -11763,18 +11828,16 @@
             "time": "2021-05-26T17:43:10+00:00"
         }
     ],
-    "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "sonata-project/admin-bundle": 20
-    },
-    "prefer-stable": true,
-    "prefer-lowest": false,
     "platform": {
         "php": ">=7.4",
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.0.0",
+    "prefer-lowest": false,
+    "prefer-stable": true,
+    "stability-flags": {
+        "sonata-project/admin-bundle": 20
+    }
 }

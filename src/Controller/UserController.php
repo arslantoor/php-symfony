@@ -16,23 +16,19 @@ class UserController extends AbstractController
 {
 
     /**
-     * @Route("/update/roles/{user_id}/")
+     * @Route("/edit/user/{user_id}/")
      */
-    function update_user($user_id,Request $request): Response
+    function update_user($user_id)
     {
-        $user = new User();
-        $form = $this->createForm(UpdateFormType::class, $user);
-        $entityManager = $this->getDoctrine()->getManager();
-        $user_table = $entityManager->getRepository(User::class)->find($user_id);
-        $email = $user_table->getEmail();
-        $updateFrom= new UpdateFormType($email);
-        $updateFrom->setter($email);
-        $updateFrom->getter();
 
+        $user = new User();
+        $entityManager = $this->getDoctrine()->getManager();
+        $userData = $entityManager->getRepository(User::class)->find($user_id);
+        $email = $userData->getEmail();
 
         return $this->render('/user/update_user.html.twig',[
-        'updateUserForm' => $form->createView(),
-            'userEmail'=>$email
+            'userEmail'=>$email,
+            'userData'=>$userData,
         ]);
     }
 
@@ -63,10 +59,32 @@ class UserController extends AbstractController
         }
         $entityManager = $this->getDoctrine()->getManager();
         $entityManager->remove($user_table);
-
         $entityManager->flush();
 
         return $this->redirectToRoute('dashboard');
+    }
+    /**
+     * @Route("/update/user_record/{user_id}/")
+     */
+    function update_user_record($user_id,Request $request)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $userData = $entityManager->getRepository(User::class)->find($user_id);
+
+        // form request method
+        if($request){
+        $userName=$request->request->get('username');
+        $userEmail=$request->request->get('email');
+        $userRole=$request->request->get('role');
+
+        $userData->setUsername($userName);
+        $userData->setEmail($userEmail);
+        $userData->setRoles([$userRole]);
+
+        $entityManager->flush();
+        return $this->redirectToRoute('dashboard');
+        }
+        return $this->render('/user/update_user.html.twig');
     }
 
 }
