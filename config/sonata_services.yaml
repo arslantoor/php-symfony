@@ -1,0 +1,32 @@
+services:
+#    acme.demo.example:
+#        class:     Acme\DemoBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+#        calls:
+#            - [setService, ["@service_id"]]
+#        tags:
+#            - { name: twig.extension }
+#            - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }
+  app.admin.user:
+    class: App\Admin\AdminControler
+    arguments:
+      - ~
+      - App\Entity\User
+      - ~
+    tags:
+      - name: sonata.admin
+        manager_type: orm
+        label: 'User'
+        label_catalogue: 'App'
+
+  app.admin.user_checklist:
+    class: App\Admin\AdminChecklistControler
+    arguments:
+      - ~
+      - App\Entity\Checklist
+      - ~
+    tags:
+      - name: sonata.admin
+        manager_type: orm
+        label: 'Check list'
+        label_catalogue: 'App'

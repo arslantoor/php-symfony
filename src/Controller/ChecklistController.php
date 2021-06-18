@@ -3,7 +3,7 @@
 
 namespace App\Controller;
 use App\Entity\Checklist;
-use App\Entity\CheckListInfo;
+use App\Entity\User;
 use App\Form\CheckListFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -22,7 +22,7 @@ class ChecklistController extends AbstractController
     {
         $email =$user->getEmail();
         $entityManager = $this->getDoctrine()->getManager();
-        $checkList = $entityManager->getRepository(CheckListInfo::class)->findOneBy(['user'=>$user->getId()]);
+        $checkList = $entityManager->getRepository(User::class)->findOneBy(['id'=>$user->getId()]);
 
         return $this->render('checklist.html.twig',['user_check_list'=>$checkList,'user_email'=>$email]);
     }
@@ -75,7 +75,7 @@ class ChecklistController extends AbstractController
     {
         $email =$user->getEmail();
         $entityManager = $this->getDoctrine()->getManager();
-        $checkList = $entityManager->getRepository(CheckListInfo::class)->findAll();
+        $checkList = $entityManager->getRepository(User::class)->findAll();
 
         return $this->render('user_checklist.html.twig',['checkList'=>$checkList,'user_email'=>$email]);
     }

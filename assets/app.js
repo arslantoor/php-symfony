@@ -12,5 +12,5 @@ import './styles/app.css';
 import './bootstrap';
 
 $(document).ready(function(){
-console.log("works")
+$(".select2-selection select2-selection--single").prepend('<span class="select2-selection__rendered" id="select2-s60cc80cc3cfa4_checklist-container" role="textbox" aria-readonly="true" title="introduction">select</span>')
 })

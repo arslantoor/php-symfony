@@ -22,6 +22,12 @@ class Kernel extends BaseKernel
         } elseif (is_file($path = \dirname(__DIR__).'/config/services.php')) {
             (require $path)($container->withPath($path), $this);
         }
+        if (is_file(\dirname(__DIR__).'/config/sonata_services.yaml')) {
+            $container->import('../config/sonata_services.yaml');
+            $container->import('../config/{sonata_services}_'.$this->environment.'.yaml');
+        } elseif (is_file($path = \dirname(__DIR__).'/config/sonata_services.php')) {
+            (require $path)($container->withPath($path), $this);
+        }
     }
 
     protected function configureRoutes(RoutingConfigurator $routes): void

@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Admin;
-use App\Entity\User;
+use App\Entity\Checklist;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -24,7 +25,12 @@ class AdminControler extends AbstractAdmin
                 'multiple' => true,
                 'choices' => ['User' => 'ROLE_USER', 'Admin' => 'ROLE_ADMIN']
             ]);
+        $formMapper->add('checklist', EntityType::class, [
+            'class' => Checklist::class,
+            'placeholder' => '--select checklist--'
+        ]);
         $formMapper->add('isVerified', CheckboxType::class);
+        $formMapper->add('status', CheckboxType::class);
     }
     protected function configureDatagridFilters(DatagridMapper $datagridMapper): void
     {
@@ -36,6 +42,8 @@ class AdminControler extends AbstractAdmin
         $listMapper->addIdentifier('username');
         $listMapper->addIdentifier('email');
         $listMapper->addIdentifier('roles');
+        $listMapper->addIdentifier('checklist');
+        $listMapper->addIdentifier('status');
         $listMapper->addIdentifier('isVerified');
     }
 }

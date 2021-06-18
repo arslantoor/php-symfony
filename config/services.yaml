@@ -23,9 +23,6 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
     # sonata Admin configuration
-    admin.category:
-        class: App\Admin\AdminControler
-        arguments: [ ~, App\Entity\User, ~ ]
-        tags:
-            - { name: sonata.admin, manager_type: orm, label: User }
+

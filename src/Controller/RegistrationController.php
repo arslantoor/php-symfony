@@ -3,7 +3,6 @@
 namespace App\Controller;
 
 use App\Entity\User;
-use App\Entity\CheckListInfo;
 use App\Entity\Checklist;
 use App\Form\RegistrationFormType;
 use App\Security\EmailVerifier;
@@ -47,18 +46,15 @@ class RegistrationController extends AbstractController
                 )
             );
             $user->setRoles(array('ROLE_USER'));
+            $user->setChecklist($checkList);
             $entityManager->persist($user);
-            $entityManager->flush();
 
-            $checkListInfo = new CheckListInfo();
+
             $checkListObject = $entityManager->getRepository(Checklist::class)->findAll();
-            $entityManager->persist($checkListInfo);
             if($checkListObject){
                 foreach($checkListObject as $checklist)
                 {
-                    $checkListInfo->setUser($user);
-                    $checkListInfo->setChecklist($checklist);
-                    $checkListInfo->setStatus(0);
+                    $user->setChecklist($checklist);
                     $entityManager->flush();
                 }
             }
