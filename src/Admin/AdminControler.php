@@ -20,7 +20,9 @@ class AdminControler extends AbstractAdmin
     {
         $formMapper->add('username', TextType::class);
         $formMapper->add('email', EmailType::class);
-        $formMapper->add('password', PasswordType::class);
+        if($this->isCurrentRoute('create')) {
+            $formMapper->add('password', PasswordType::class,['required' => false]);
+        }
         $formMapper->add('roles', ChoiceType::class, [
                 'multiple' => true,
                 'choices' => ['User' => 'ROLE_USER', 'Admin' => 'ROLE_ADMIN']
@@ -29,8 +31,8 @@ class AdminControler extends AbstractAdmin
             'class' => Checklist::class,
             'placeholder' => '--select checklist--'
         ]);
-        $formMapper->add('isVerified', CheckboxType::class);
-        $formMapper->add('status', CheckboxType::class);
+        $formMapper->add('isVerified', CheckboxType::class,['required' => false]);
+        $formMapper->add('status', CheckboxType::class,['required' => false]);
     }
     protected function configureDatagridFilters(DatagridMapper $datagridMapper): void
     {
