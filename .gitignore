@@ -1,6 +1,6 @@
 ### symfony/framework ###
 .idea
-node_modules
+/node_modules/
 .env.local
 /var/
 /vendor/
