@@ -2,7 +2,6 @@
 
 namespace App\Admin;
 use App\Entity\Checklist;
-use App\Entity\User;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -35,16 +34,18 @@ class AdminControler extends AbstractAdmin
         $formMapper->add('isVerified', CheckboxType::class,['required' => false]);
         $formMapper->add('status', CheckboxType::class,['required' => false]);
     }
+
     protected function configureDatagridFilters(DatagridMapper $datagridMapper): void
     {
         $datagridMapper->add('email');
         $datagridMapper->add('username');
     }
+
     protected function configureListFields(ListMapper $listMapper): void
     {
         $listMapper->addIdentifier('username');
         $listMapper->addIdentifier('email');
-        $listMapper->addIdentifier('roles[0]');
+        $listMapper->addIdentifier('roles');
         $listMapper->addIdentifier('checklist');
         $listMapper->addIdentifier('status');
         $listMapper->addIdentifier('isVerified');

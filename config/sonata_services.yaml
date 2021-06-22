@@ -10,6 +10,8 @@ services:
         manager_type: orm
         label: 'User'
         label_catalogue: 'App'
+        on_top: true
+        group: admin
   app.admin.checklist:
     class: App\Admin\AdminChecklistControler
     arguments:
@@ -20,5 +22,6 @@ services:
       - name: sonata.admin
         manager_type: orm
         label: 'Check list'
+        on_top: true
         label_catalogue: 'App'
 

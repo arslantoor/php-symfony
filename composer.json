@@ -53,13 +53,9 @@
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
-<<<<<<< HEAD
-        "doctrine/doctrine-fixtures-bundle": "^3.4",
-=======
         "phpunit/phpunit": "^9.5",
         "symfony/browser-kit": "^5.3",
         "symfony/css-selector": "^5.3",
->>>>>>> bc6b54fed3a5437f30b19123c775e948234e03eb
         "symfony/debug-bundle": "^5.3",
         "symfony/maker-bundle": "^1.31",
         "symfony/stopwatch": "^5.3",
