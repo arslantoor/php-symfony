@@ -1,14 +1,18 @@
-# Description
-Setup of basic symfony checklist app which assign checklist on user signup, user can be differentiate on the base of user Role such as ROLE_ADMIN and ROLE_USER.This app is using sonata admin bundle to manage user record.
+# Checklist App
 
+
+# Description
+This is a simple application that allows user to register and maintain a checklist that is assigned to them at signup. An admin user can list/edit other users, and check/uncheck items in their checklists. 
 
 # Prerequisites
-* symfony 5.3
-* Symfony CLI version v4.23.5
-* composer version 2.0.13
+* git
 * docker-compose version 3.8
 * Docker version 20.10.6
 * Sonata Admin bundle 4.4
+
+# Tech Stack
+* symfony 5.3
+* richarvey/nginx-php-fpm:1.10.3
 
 # Package Installation guid
 * install composer <a href="https://getcomposer.org/download/">download and install composer</a>
@@ -17,31 +21,21 @@ Setup of basic symfony checklist app which assign checklist on user signup, user
 * Install docker-compose <a href="https://docs.docker.com/compose/install/">install docker-compose</a>,</li>
 
 # Project Setup steps
-
+Clone the project from Github repo
 ```git clone
 git clone https://github.com/arslantoor/php-symfony.git
 ```
+Build the docker image with docker-compose
 ```
 cd php-symfony
-```
-
-
-```
-composer install or run composer.phar install
-```
-
-```
-npm install
-```
-```
 docker-compose build
 ```
-
+Run docker container with docker-compose
 ```
 docker-compose up
 ```
-
 # Console Command
+Run bin/console command to change user role
 ```
 php bin/console update-user 1 ROLE_USER
 ```
