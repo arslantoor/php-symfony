@@ -1,11 +1,15 @@
 ### symfony/framework ###
+.git
+*.md
 .idea
 .env.local
 /var/
 /vendor/
+
 ###> symfony/phpunit-bridge ###
 phpunit.xml.dist
 
 ### docker ###
 docker-compose.yml
-
+docker-compose.yml.dist
+Dockerfile
