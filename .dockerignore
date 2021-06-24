@@ -5,8 +5,12 @@
 .env.local
 /var/
 /vendor/
+<<<<<<< HEAD
 node_modules
 
+=======
+/node_modules/
+>>>>>>> 7608035f842b471de88d6d49c0aac884f87d8c58
 ###> symfony/phpunit-bridge ###
 phpunit.xml.dist
 
@@ -14,4 +18,7 @@ phpunit.xml.dist
 docker-compose.yml
 docker-compose.yml.dist
 Dockerfile
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7608035f842b471de88d6d49c0aac884f87d8c58
