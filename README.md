@@ -1,8 +1,8 @@
+
 # Checklist App
 
-
 # Description
-This is a simple application that allows user to register and maintain a checklist that is assigned to them at signup. An admin user can list/edit other users, and check/uncheck items in their checklists. 
+This is a simple application that allows user to register and maintain a checklist that is assigned to them at signup. An admin user can list/edit other users, and check/uncheck items in their checklists.
 
 # Prerequisites
 * git
@@ -36,8 +36,11 @@ docker-compose up
 ```
 # Console Command
 Run bin/console command to change user role
+
+# Console Command
+The command written bellow has integer value <user_id> which refer to User Entity ,database table id and <user_roles> is denoting to user role you can find the user id by running this command "php bin/console update-user" this will list the User entity 'database' table where you can see the user id and roles and then You can use the bellow command to change your user roles
 ```
-php bin/console update-user 1 ROLE_USER
+php bin/console update-user <user_id> <user_roles>
 ```
 
 Brows <a href="http://localhost:8080">localhost:8080<a>
