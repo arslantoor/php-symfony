@@ -5,7 +5,7 @@
 .env.local
 /var/
 /vendor/
-node_modules
+/node_modules/
 ###> symfony/phpunit-bridge ###
 phpunit.xml.dist
 
