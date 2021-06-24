@@ -16,4 +16,3 @@ phpunit.xml.dist
 docker-compose.yml
 docker-compose.yml.dist
 Dockerfile
-
