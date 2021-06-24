@@ -11,6 +11,3 @@ import './styles/app.css';
 // start the Stimulus application
 import './bootstrap';
 
-$(document).ready(function(){
-console.log("works")
-})

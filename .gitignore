@@ -8,6 +8,8 @@
 
 # Backup entities generated with doctrine:generate:entities command
 /src/Entity/
+###> symfony/phpunit-bridge ###
+phpunit.xml.dist
 
 ### docker ###
 docker-compose.yml
