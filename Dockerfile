@@ -17,5 +17,5 @@ COPY --chown=nginx:nginx . /var/www/html/
 # give ownership to nginx user
 RUN npm install --only=dev
 
-USER root
+USER coeus
 WORKDIR /var/www/html/
