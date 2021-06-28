@@ -32,9 +32,5 @@ Run docker container with docker-compose
 ```
 docker-compose up
 ```
-# Console Command
-```
-php bin/console update-user 1 ROLE_USER
-```
 
 Browse <a href="http://localhost:8080">localhost:8080<a>
