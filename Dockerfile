@@ -11,13 +11,10 @@ ENV WEBROOT="/var/www/html/public/"
 ENV PHP_CATCHALL="1"
 ENV RUN_SCRIPT="1"
 
-
 ENV  WEBROOT="/var/www/html/public/"
 COPY --chown=nginx:nginx . /var/www/html/
 
-# give ownership to nginx user
 RUN npm install --only=dev
 
 USER root
-
 WORKDIR /var/www/html/
