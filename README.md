@@ -33,7 +33,6 @@ Run docker container with docker-compose
 ```
 docker-compose up
 ```
-<<<<<<< HEAD
 
 # Console Command
 The command written bellow has integer value <user_id> which refer to User Entity ,database table id and <user_roles> is denoting to user role you can find the user id by running this command "php bin/console update-user" this will list the User entity 'database' table where you can see the user id and roles and then You can use the bellow command to change your user roles
