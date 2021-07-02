@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% block head %}
+    {% include "layout/base.html.twig" %}
+{% endblock %}
+{% block body %}
+<body class="nav-fixed bg-light">
+<!-- Top app bar navigation menu-->
+
+{% include 'layout/top-nave.html.twig' %}
+
+<!-- Layout wrapper-->
+<div id="layoutDrawer">
+    <!-- Layout navigation-->
+    <div id="layoutDrawer_nav">
+        <!-- Drawer navigation-->
+        <nav class="drawer accordion drawer-light bg-white" id="drawerAccordion">
+            {% include 'layout/side-nave.html.twig' %}
+
+            <!-- Drawer footer        -->
+            <div class="drawer-footer border-top">
+                <div class="d-flex align-items-center">
+                    <i class="material-icons text-muted">account_circle</i>
+                    <div class="ms-3">
+                        <div class="caption">Logged in as:</div>
+                        <div class="small fw-500">Start Bootstrap</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Layout content-->
+    <div id="layoutDrawer_content">
+        <!-- Main page content-->
+        <main>
+            <!-- Main dashboard content-->
+            <div class="container-xl p-5">
+                <!-- Colored status cards-->
+                <div class="card card-raised">
+                    <div class="card-header bg-transparent px-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="me-4">
+                                <h2 class="card-title mb-0">Symfony</h2>
+                                <div class="card-subtitle"> Symfony check list  ({{ task_list|length }}) </div>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-lg btn-text-primary btn-icon" type="button"><i class="material-icons">download</i></button>
+                                <button class="btn btn-lg btn-text-primary btn-icon" type="button"><i class="material-icons">print</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <!-- Simple DataTables example-->
+                        <div class="container">
+
+                            <div class="table-responsive">
+                                <table class="table align-middle">
+
+                                    <tbody>
+
+                                    {% for index,task in task_list %}
+                                        <tr>
+                                            <td>{{  index  }}</td>
+                                            <td>
+                                                <input name="chkBox_1" type="checkbox" value="{{ task }}" readonly class="form-check-input">
+                                            </td>
+                                            <td>{{  task  }}</td>
+                                        </tr>
+                                    {% endfor %}
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer-->
+        <!-- Min-height is set inline to match the height of the drawer footer-->
+        <footer class="py-4 mt-auto border-top" style="min-height: 74px">
+            <div class="container-xl px-5">
+                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between small">
+                    <div class="me-sm-2">Copyright © Your Website 2021</div>
+                    <div class="d-flex ms-sm-2">
+                        <a class="text-decoration-none" href="#!">Privacy Policy</a>
+                        <div class="mx-1">·</div>
+                        <a class="text-decoration-none" href="#!">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+{% endblock %}
+<!-- Load Bootstrap JS bundle-->
+{% block footer %}
+    {% include "layout/footer.html.twig" %}
+{% endblock %}
+</body>
+</html>
