@@ -6,5 +6,11 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: test-app-container
+    environment:
+    # Enter your system PGID & PUID ,to find this run this command in your terminal 'id'
+      PGID: 1000
+      PUID: 1000
+    volumes:
+      - .:/var/www/html/
     ports:
       - "8080:80"
