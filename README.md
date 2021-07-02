@@ -19,7 +19,7 @@ This is a simple application that allows user to register and maintain a checkli
 * Install docker-compose <a href="https://docs.docker.com/compose/install/">install docker-compose</a>,</li>
 
 # Project Setup steps
-Clone the project from Github repo
+Clone the project from GitHub repo
 ```git clone
 git clone https://github.com/arslantoor/php-symfony.git
 ```

@@ -14,10 +14,6 @@ phpunit.xml.dist
 ### docker ###
 docker-compose.yml
 
-###> symfony/phpunit-bridge ###
-phpunit.xml.dist
-
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
-###< symfony/webpack-encore-bundle ###
