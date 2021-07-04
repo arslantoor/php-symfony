@@ -4,10 +4,7 @@
 /var/
 /vendor/
 /migrations/
-/translations/
 
-# Backup entities generated with doctrine:generate:entities command
-/src/Entity/
 ###> symfony/phpunit-bridge ###
 phpunit.xml.dist
 
@@ -17,3 +14,8 @@ docker-compose.yml
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###

@@ -11,6 +11,7 @@ RUN apk add --update npm
 USER nginx
 
 ENV  WEBROOT="/var/www/html/public/"
+ENV RUN_SCRIPTS='1'
 COPY --chown=nginx:nginx . /var/www/html/
 RUN npm install --only=dev
 
