@@ -6,7 +6,6 @@
 /var/
 /vendor/
 /migrations/
-/translations/
 /node_modules/
 
 ###> symfony/phpunit-bridge ###

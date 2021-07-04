@@ -4,20 +4,18 @@
 /var/
 /vendor/
 /migrations/
-/translations/
 
-# Backup entities generated with doctrine:generate:entities command
-/src/Entity/
 ###> symfony/phpunit-bridge ###
 phpunit.xml.dist
 
 ### docker ###
 docker-compose.yml
 
-###> symfony/phpunit-bridge ###
-phpunit.xml.dist
-
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
-###< symfony/webpack-encore-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
