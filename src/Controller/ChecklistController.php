@@ -52,6 +52,7 @@ class ChecklistController extends AbstractController
      */
     public function checklist_status(UserInterface $user,$user_checklist_id):Response{
         $entityManager = $this->getDoctrine()->getManager();
+
         $userCheckList = $entityManager->getRepository(User::class)->findOneBy(['id'=>$user_checklist_id]);
         if($userCheckList->getStatus() == true){
             $userCheckList->setStatus(false);
