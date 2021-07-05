@@ -18,22 +18,20 @@ class HomeController extends AbstractController
      */
     public function index(UserInterface $user)
     {
-
         $entityManager = $this->getDoctrine()->getManager();
         $user_list = $entityManager->getRepository(User::class)->findAll();
-        $total=count($user_list);
         $email =$user->getEmail();
         $role = $user->getRoles();
         if ($role[0] === 'ROLE_USER')
         {
             return $this->render('index.html.twig',[
-                'user_email'=>$email,'total_user'=>$total
+                'user_email'=>$email
             ]);
         }
         else
         {
             return $this->render('index.html.twig',[
-                'user_list'=>$user_list, 'user_email'=>$email,'total_user'=>$total
+                'user_list'=>$user_list, 'user_email'=>$email
             ]);
         }
         return $this->render('error/error-403.html.twig');
