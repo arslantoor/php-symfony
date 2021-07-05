@@ -65,19 +65,19 @@
                                         <th>Action</th>
                                     </tr>
                                     </thead>
-                                    {% for index,userchecklist in checkList %}
+                                    {% for index,userchecklist in userCheckList %}
                                         <tr>
                                             <td>{{ index }}</td>
                                             <td>
-                                               {{ userchecklist.user.email }}
+                                               {{ userchecklist.email }}
                                             </td>
-                                            <td> {{ userchecklist.checklist.name }}</td>
+                                            <td> {{ userchecklist.Checklist }}</td>
                                             <td > {{ userchecklist.status }}</td>
 
                                                 <td>
                                                     <div class="display flex">
                                                         {% if userchecklist.status == true %}
-                                                            <a href="/update/checklist_status/{{ userchecklist.id }}" title="unmark cheklist"><i class="material-icons-outlined bg-primary text-light p-1">radio_button_unchecked</i></a>
+                                                            <a href="/update/checklist_status/{{ userchecklist.id }}" title="unmarked checklist"><i class="material-icons-outlined bg-primary text-light p-1">radio_button_unchecked</i></a>
                                                         {% else %}
                                                             <a href="/update/checklist_status/{{ userchecklist.id }}" title="mark checklist"><i class="material-icons-outlined bg-success text-light p-1">done</i></a>
                                                         {% endif %}

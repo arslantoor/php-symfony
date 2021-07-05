@@ -20,6 +20,7 @@ use Symfony\Component\Console\Helper\Table;
  * @property EntityManagerInterface entityManagerInterface
  * @property UserRepository\ userRepository
  */
+
 class UpdateUserCommand extends Command
 {
 
