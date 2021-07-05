@@ -13,6 +13,7 @@ use SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface;
 
 class EmailVerifier
 {
+
     private $verifyEmailHelper;
     private $mailer;
     private $entityManager;
