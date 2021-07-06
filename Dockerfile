@@ -2,6 +2,8 @@ FROM richarvey/nginx-php-fpm:1.10.3
 USER root
 
 ENV WEBROOT="/var/www/html/public/"
+ENV PHP_CATCHALL="1"
+
 RUN chown nginx:nginx /var/www/html
 RUN apk add --update npm
 
