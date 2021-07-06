@@ -4,8 +4,8 @@ USER root
 ENV WEBROOT="/var/www/html/public/"
 ENV PHP_CATCHALL="1"
 
-RUN chown nginx:nginx /var/www/html
 RUN apk add --update npm
+RUN chown nginx:nginx /var/www/html
 
 #switch  to user nginx
 USER nginx
