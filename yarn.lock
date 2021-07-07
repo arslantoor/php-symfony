@@ -909,39 +909,6 @@
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.9.2.tgz"
   "version" "2.9.2"
 
-"@stimulus/core@^2.0.0":
-  "integrity" "sha512-ff70GafKtzc8zQ1/cG+UvL06GcifPWovf2wBEdjLMh9xO2GOYURO3y2RYgzIGYUIBefQwyfX2CLfJdZFJrEPTw=="
-  "resolved" "https://registry.npmjs.org/@stimulus/core/-/core-2.0.0.tgz"
-  "version" "2.0.0"
-  dependencies:
-    "@stimulus/mutation-observers" "^2.0.0"
-
-"@stimulus/multimap@^2.0.0":
-  "integrity" "sha512-pMBCewkZCFVB3e5mEMoyO9+9aKzHDITmf3OnPun51YWxlcPdHcwbjqm1ylK63fsoduIE+RowBpFwFqd3poEz4w=="
-  "resolved" "https://registry.npmjs.org/@stimulus/multimap/-/multimap-2.0.0.tgz"
-  "version" "2.0.0"
-
-"@stimulus/mutation-observers@^2.0.0":
-  "integrity" "sha512-kx4VAJdPhIGBQKGIoUDC2tupEKorG3A+ckc2b1UiwInKTMAC1axOHU8ebcwhaJIxRqIrs8//4SJo9YAAOx6FEg=="
-  "resolved" "https://registry.npmjs.org/@stimulus/mutation-observers/-/mutation-observers-2.0.0.tgz"
-  "version" "2.0.0"
-  dependencies:
-    "@stimulus/multimap" "^2.0.0"
-
-"@stimulus/webpack-helpers@^2.0.0":
-  "integrity" "sha512-D6tJWsAC024MwGEIKlUVYU8Ln87mlrmiwHvYAjipg+s8H4eLxUMQ3PZkWyPevfipH+oR3leuHsjYsK1gN5ViQA=="
-  "resolved" "https://registry.npmjs.org/@stimulus/webpack-helpers/-/webpack-helpers-2.0.0.tgz"
-  "version" "2.0.0"
-
-"@symfony/stimulus-bridge@^2.0.0":
-  "integrity" "sha512-vuSV1rfNCJ4gILDs3fKIlXvPAL54fRwWljpepqHiPGnHHRiqMydRtMeeqC5EZQ2hKrO9E49iqEJx0xNgAq5tVg=="
-  "resolved" "https://registry.npmjs.org/@symfony/stimulus-bridge/-/stimulus-bridge-2.1.0.tgz"
-  "version" "2.1.0"
-  dependencies:
-    "acorn" "^8.0.5"
-    "loader-utils" "^2.0.0"
-    "schema-utils" "^3.0.0"
-
 "@symfony/webpack-encore@^1.0.0":
   "integrity" "sha512-Bfq99dUwDPH9BN777CADY9xJOLbowrNHwHSi3w8TjmhcOSqchgcWjdlT0AqXlbB3wUqXwpw9Tz6anQAMrC6+xA=="
   "resolved" "https://registry.npmjs.org/@symfony/webpack-encore/-/webpack-encore-1.5.0.tgz"
@@ -1232,7 +1199,7 @@
     "mime-types" "~2.1.24"
     "negotiator" "0.6.2"
 
-"acorn@^8.0.5", "acorn@^8.4.1":
+"acorn@^8.4.1":
   "integrity" "sha512-asabaBSkEKosYKMITunzX177CXxQ4Q8BSSzMTKD+FefUhipQC70gfW5SiUDhYQ3vk8G+81HqQk7Fv9OXwwn9KA=="
   "resolved" "https://registry.npmjs.org/acorn/-/acorn-8.4.1.tgz"
   "version" "8.4.1"
@@ -4382,14 +4349,6 @@
   "integrity" "sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow="
   "resolved" "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz"
   "version" "1.5.0"
-
-"stimulus@^2.0":
-  "integrity" "sha512-xipy7BS5TVpg4fX6S8LhrYZp7cmHGjmk09WSAiVx1gF5S5g43IWsuetfUhIk8HfHUG+4MQ9nY0FQz4dRFLs/8w=="
-  "resolved" "https://registry.npmjs.org/stimulus/-/stimulus-2.0.0.tgz"
-  "version" "2.0.0"
-  dependencies:
-    "@stimulus/core" "^2.0.0"
-    "@stimulus/webpack-helpers" "^2.0.0"
 
 "string_decoder@^1.1.1":
   "integrity" "sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA=="
