@@ -6,7 +6,6 @@
 /var/
 /vendor/
 /migrations/
-/translations/
 /node_modules/
 
 ###> symfony/phpunit-bridge ###
@@ -16,3 +15,9 @@ phpunit.xml.dist
 docker-compose.yml
 docker-compose.yml.dist
 Dockerfile
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
