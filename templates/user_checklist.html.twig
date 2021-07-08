@@ -39,8 +39,8 @@
                     <div class="card-header bg-transparent px-4">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="me-4">
-                                <h2 class="card-title mb-0">Symfony</h2>
-                                <div class="card-subtitle"> Symfony checklist  ({{ user_check_list|length }}) </div>
+                                <h2 class="card-title mb-0">User</h2>
+                                <div class="card-subtitle"> User Checklist   </div>
                             </div>
                             <div class="d-flex gap-2">
                                 <button class="btn btn-lg btn-text-primary btn-icon" type="button"><i class="material-icons">download</i></button>
@@ -54,25 +54,38 @@
 
                             <div class="table-responsive">
                                 <table class="table align-middle">
-                                    <tbody>
-                                    {% if user_check_list %}
-                                        <tr>
-                                            <td>{{  user_check_list.id  }}</td>
-                                            <td>
-                                                {% if user_check_list.status %}
-                                                <input name="chkBox_1" type="checkbox" checked="{{ user_check_list.status }}" value="{{ user_check_list.checklist.name }}" readonly="{{  user_check_list.status }}" class="form-check-input">
-                                                {% else %}
-                                                    <input name="chkBox_1" type="checkbox"  value="{{ user_check_list.checklist.name }}" class="form-check-input">
-                                                {% endif %}
-                                            </td>
-                                            <td>{{ user_check_list.checklist.name }}</td>
 
-                                        </tr>
-                                    {% else %}
+                                    <tbody>
+                                    <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>user email</th>
+                                        <th>checklist name</th>
+                                        <th>checklist status </th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                    {% for index,userchecklist in userCheckList %}
                                         <tr>
-                                            <td>No record Found</td>
+                                            <td>{{ index }}</td>
+                                            <td>
+                                               {{ userchecklist.email }}
+                                            </td>
+                                            <td> {{ userchecklist.Checklist }}</td>
+                                            <td > {{ userchecklist.status }}</td>
+
+                                                <td>
+                                                    <div class="display flex">
+                                                        {% if userchecklist.status == true %}
+                                                            <a href="/update/checklist_status/{{ userchecklist.id }}" title="unmarked checklist"><i class="material-icons-outlined bg-primary text-light p-1">radio_button_unchecked</i></a>
+                                                        {% else %}
+                                                            <a href="/update/checklist_status/{{ userchecklist.id }}" title="mark checklist"><i class="material-icons-outlined bg-success text-light p-1">done</i></a>
+                                                        {% endif %}
+                                                    </div>
+
+                                                </td>
                                         </tr>
-                                    {% endif %}
+                                    {% endfor %}
 
                                     </tbody>
                                 </table>
