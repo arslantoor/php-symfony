@@ -8,7 +8,7 @@
     {% endblock %}
 </head>
 <body>
-{% block nave_bar %}
+{% block nav_bar %}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">Symfony checklist</a>
@@ -33,8 +33,8 @@
 <main>
     {% block content %}{% endblock %}
 </main>
-</body>
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
+</body>
 </html>

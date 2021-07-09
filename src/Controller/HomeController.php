@@ -9,11 +9,11 @@ class HomeController
 {
     /**
      * @Route ("/", name="home")
-     * @Template("index.html.twig")
+     * @Template()
      */
     public function index()
     {
-        return array();
+        return [];
     }
 
 }

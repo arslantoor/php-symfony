@@ -10,7 +10,7 @@ class CheckListController
 {
     /**
      * @Route ("/checklist", name="checklist")
-     * @Template("checklist.html.twig")
+     * @Template()
      */
     public function checklist(): array
     {
@@ -19,6 +19,6 @@ class CheckListController
             'Forms', 'Database and Doctrine ORM', 'Services Container', 'Security', 'Logging', 'Validation',
             'Bundles', 'Console', 'Translations', 'Easy Admin bundle'];
 
-        return array("task_list" => $task_list);
+        return ['task_list'=> $task_list];
     }
 }

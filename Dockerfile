@@ -1,8 +1,6 @@
 FROM richarvey/nginx-php-fpm:1.10.3
-USER root
 
 ENV WEBROOT="/var/www/html/public/"
-ENV PHP_CATCHALL="1"
 
 RUN apk add --update npm
 RUN npm install -g yarn
@@ -17,5 +15,3 @@ RUN yarn build
 
 #switch  back to user root
 USER root
-
-WORKDIR /var/www/html/
