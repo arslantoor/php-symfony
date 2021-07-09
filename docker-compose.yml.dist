@@ -9,8 +9,7 @@ services:
     volumes:
       - .:/var/www/html/
     environment:
-      PGID: 1000    # How to check GID : execute on host machine `id -g ${whoami}`
-      PUID: 1000    # How to check GID : execute on host machine `id -g ${whoami}`
-      PHP_CATCHALL: 1
+      PGID: 1000    # How to check GID : execute on host machine `id -g ${whoami}
+      PUID: 1000    # How to check GID : execute on host machine `id -g ${whoami}
     ports:
       - "8080:80"
