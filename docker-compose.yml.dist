@@ -6,6 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: test-app-container
+    environment:
+    # Enter your system PGID & PUID ,to find this run this command in your terminal 'id'
+      PGID: 1000
+      PUID: 1000
     volumes:
       - .:/var/www/html/
     environment:
@@ -13,3 +17,17 @@ services:
       PUID: 1000    # How to check GID : execute on host machine `id -g ${whoami}`
     ports:
       - "8080:80"
+    depends_on:
+      - db
+    links:
+      - db
+  db:
+      image: mysql/mysql-server:8.0.20
+      container_name: 'mysqldb-container'
+      environment:
+        MYSQL_ROOT_PASSWORD: ""
+        MYSQL_DATABASE: ""
+        MYSQL_USER: ""
+        MYSQL_PASSWORD: ""
+      ports:
+        - 8000:3306

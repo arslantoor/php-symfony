@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% block head %}
+    {% include "layout/base.html.twig" %}
+{% endblock %}
+{% block body %}
+
+<body class="bg-primary">
+<!-- Layout wrapper-->
+<div id="layoutAuthentication">
+    <!-- Layout content-->
+    <div id="layoutAuthentication_content">
+        <!-- Main page content-->
+        <main>
+            <!-- Main content container-->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-8">
+                        <div class="card card-raised shadow-10 mt-5 mt-xl-10 mb-4">
+                            <div class="card-body p-5">
+                                <!-- Auth header with logo image-->
+                                <div class="text-center">
+                                    <img class="mb-3" src="{{  asset ('img/icons/background.svg') }}" alt="..." style="height: 48px" />
+                                    <p class=" mb-4">Reset Password</p>
+                                    {% for flashError in app.flashes('reset_password_error') %}
+                                        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+                                    {% endfor %}
+                                </div>
+                                <!-- Reset password submission form-->
+                                {{ form_start(requestForm) }}
+                                    <div class="mb-4">
+                                        {{ form_row(requestForm.email) }}
+                                        <small class="text-muted">
+                                            Enter your email address and  we will send you a
+                                            link to reset your password.
+                                        </small>
+                                    </div>
+                                    <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                                        <a class="small fw-500 text-decoration-none" href="/">Return to login</a>
+                                        <button class="btn btn-primary" >reset password</button>
+                                    </div>
+                                {{ form_end(requestForm) }}
+                            </div>
+                        </div>
+                        <!-- Auth card message-->
+                        <div class="text-center mb-5"><a class="small fw-500 text-decoration-none link-white" href="/register">Need an account? Sign up!</a></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Layout footer-->
+    <div id="layoutAuthentication_footer">
+        <!-- Auth footer-->
+        <footer class="p-4">
+            <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between small">
+                <div class="me-sm-3 mb-2 mb-sm-0"><div class="fw-500 text-white">Copyright © Your Website 2021</div></div>
+                <div class="ms-sm-3">
+                    <a class="fw-500 text-decoration-none link-white" href="#!">Privacy</a>
+                    <a class="fw-500 text-decoration-none link-white mx-4" href="#!">Terms</a>
+                    <a class="fw-500 text-decoration-none link-white" href="#!">Help</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<!-- Load Bootstrap JS bundle-->
+{% endblock %}
+<!-- Load Bootstrap JS bundle-->
+{% block footer %}
+    {% include "layout/footer.html.twig" %}
+{% endblock %}
+</body>
+</html>
