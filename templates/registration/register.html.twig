@@ -1,0 +1,35 @@
+{% extends 'layout/base.html.twig' %}
+{% block title %} Checklist - User Registration {% endblock %}
+{% block navbar %} {% endblock %}
+{% block content %}
+    <!-- Main content container-->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-4 col-xl-6">
+                <div class="card shadow mt-5 mt-xl-10 mb-5">
+                    <div class="card-body p-5">
+                        <!-- Auth header with logo image-->
+                        <div class="text-center">
+                            <h3 class=" mb-0">Create New Account</h3>
+                            <div class="subheading-1 mb-5">
+                                {% for flashError in app.flashes('verify_email_error') %}
+                                    <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- Register new account form-->
+                        {{ form_start(registrationForm) }}
+                        <div class="mb-4">
+                            {{ form_row(registrationForm) }}
+                        </div>
+                        <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+                            <a class="small fw-500 text-decoration-none" href="/">Sign in instead</a>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                        {{ form_end(registrationForm) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

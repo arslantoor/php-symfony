@@ -2,17 +2,19 @@
 
 namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class HomeController extends AbstractController
 {
     /**
-     * @Route ("/", name="home")
+     * @Route ("/dashboard", name="dashboard")
+     * @Template()
      */
-    public function index()
+    public function index(UserInterface $user)
     {
-        return $this->render('index.html.twig');
+        $email =$user->getEmail();
+        return ['user_email'=>$email,];
     }
-
 }

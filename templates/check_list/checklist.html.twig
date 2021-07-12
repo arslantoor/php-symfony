@@ -1,0 +1,28 @@
+{% extends 'layout/base.html.twig' %}
+{% block title %} Checklists - My Checklist {% endblock %}
+{% block content %}
+    <div class="card-body p-4 mx-auto m-2 shadow w-50">
+        <div class="card-header">
+            symfony checklist ({{ task_list|length }})
+        </div>
+        <!-- Simple DataTables example-->
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <tbody>
+                    {% for index,task in task_list %}
+                        <tr>
+                            <td>{{ index }}</td>
+                            <td>
+                                <input name="chkBox_1" type="checkbox" value="{{ task }}" readonly
+                                       class="form-check-input">
+                            </td>
+                            <td>{{ task }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

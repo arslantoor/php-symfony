@@ -3,12 +3,17 @@
 .env.local
 /var/
 /vendor/
-/node_modules/
+
 ###> symfony/phpunit-bridge ###
 phpunit.xml.dist
 
 ### docker ###
 docker-compose.yml
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
