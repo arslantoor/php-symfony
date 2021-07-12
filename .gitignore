@@ -3,7 +3,6 @@
 .env.local
 /var/
 /vendor/
-/migrations/
 
 ###> symfony/phpunit-bridge ###
 phpunit.xml.dist
@@ -14,8 +13,6 @@ docker-compose.yml
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
-
-###> phpunit/phpunit ###
-/phpunit.xml
-.phpunit.result.cache
-###< phpunit/phpunit ###
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###

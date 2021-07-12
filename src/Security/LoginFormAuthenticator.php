@@ -20,7 +20,7 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
 {
     use TargetPathTrait;
 
-    public const LOGIN_ROUTE = 'app_login';
+    public const LOGIN_ROUTE = 'login';
 
     private UrlGeneratorInterface $urlGenerator;
 
@@ -33,7 +33,7 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
     {
         $email = $request->request->get('email', '');
 
-        $request->getSession()->set(Security::LAST_USERNAME, $email);
+        $request->getSession()->set(Security::LAST_USEREMAIL, $email);
         return new Passport(
             new UserBadge($email),
             new PasswordCredentials($request->request->get('password', '')),
